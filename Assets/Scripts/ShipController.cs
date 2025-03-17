@@ -5,11 +5,13 @@ using UnityEngine;
 public class ShipController : MonoBehaviour
 {
     public float moveSpeed;
+    public float shootDelay = .5f;
     public GameObject bulletPrefab;
     public GameObject missilePrefab;
     public Transform anchor;
 
     private Vector3 anchorPos; // avoids allocating memory to a new Vec3 every frame
+    private float nextShoot;
 
     public ShipControls Input { get; private set; }
     
@@ -33,10 +35,12 @@ public class ShipController : MonoBehaviour
         anchorPos.Set(anchor.position.x, Mathf.Clamp(anchor.position.y, -5f, 5f), anchor.position.z);
         anchor.position = anchorPos;
         
-        if (input.ShootBullet.WasPressedThisFrame())
+        if (input.ShootBullet.WasPressedThisFrame() && Time.time >= nextShoot)
         {
             var bullet = Instantiate(bulletPrefab);
             bullet.transform.position = transform.position + (Vector3.right * 1.3f);
+
+            nextShoot = Time.time + shootDelay;
         }
 
         if (input.ShootMissile.WasPressedThisFrame())
