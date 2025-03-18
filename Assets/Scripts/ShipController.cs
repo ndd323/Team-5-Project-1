@@ -12,10 +12,9 @@ public class ShipController : MonoBehaviour
 
     private Vector3 anchorPos; // avoids allocating memory to a new Vec3 every frame
     private float nextShoot;
+    private Rigidbody2D rb;
 
     public ShipControls Input { get; private set; }
-    
-    private Rigidbody2D rb { get; set; }
 
     // Start is called before the first frame update
     void Start()
