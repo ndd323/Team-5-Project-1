@@ -13,15 +13,28 @@ public class StageManager : MonoBehaviour
 
     public int StageIndex { get; private set; } // Index of the active stage
 
+    void StartStage(int index)
+    {
+        StageIndex = index;
+        currentStage = new Stage(stages[index]);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        currentStage = new Stage(stages[0]);
+        StartStage(0);
     }
 
     // Update is called once per frame
     void Update()
     {
         currentStage.Update();
+
+        if (Time.time >= currentStage.EndTime)
+        {
+            int nextStage = (stages.Count <= StageIndex + 1) ? 0 : StageIndex + 1;
+            //Equivalent to nextStage = StageIndex + 1; if (stages.Count <= StageIndex + 1) nextStage = 0;
+            StartStage(nextStage);
+        }
     }
 }
