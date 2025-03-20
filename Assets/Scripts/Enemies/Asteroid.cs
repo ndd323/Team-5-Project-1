@@ -33,6 +33,11 @@ public class Asteroid : Enemy
         float moveSpeed = Game.Instance.scrollSpeed;
 
         transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+
+        if (transform.position.x < -20)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

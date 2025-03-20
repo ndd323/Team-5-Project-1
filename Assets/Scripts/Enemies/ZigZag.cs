@@ -20,5 +20,11 @@ public class ZigZag : Enemy
 
         anchor.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         anchor.Translate(Vector3.up * Time.deltaTime * amplitude * Mathf.Sin(Time.time * 2f * Mathf.PI * frequency + phaseShift));
+
+        if (anchor.position.x < -20)
+        {
+            Destroy(gameObject);
+        }
+        
     }
 }
