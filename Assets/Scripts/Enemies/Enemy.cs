@@ -23,9 +23,13 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     }
 
     // Start is called before the first frame update
-    protected abstract void Start();
+    protected virtual void Start()
+    {
+        Health = maxHealth;
+    }
 
     // Update is called once per frame
     protected abstract void Update();
+
     
 }
