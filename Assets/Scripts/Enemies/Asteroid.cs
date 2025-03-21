@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Asteroid : Enemy
 {
+    public float damage = 1;
+    
     public float startSize = 1;
 
     private float size = 1;
+    
     public float Size
     {
         get { return size; }
@@ -35,4 +38,14 @@ public class Asteroid : Enemy
         transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("Ship damaged!!!");
+        var collided = collision.gameObject;
+
+        if (collided.GetComponent<IDamageable>() != null)
+        {
+            collided.GetComponent<IDamageable>().TakeDamage(damage);
+        }
+    }
 }

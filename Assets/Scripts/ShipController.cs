@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipController : MonoBehaviour
+public class ShipController : MonoBehaviour, IDamageable
 {
     public float moveSpeed;
     public float shootDelay = .5f;
@@ -16,6 +16,24 @@ public class ShipController : MonoBehaviour
 
     public ShipControls Input { get; private set; }
 
+    public float maxHealth = 5;
+
+    public float Health { get; protected set; }
+
+    public virtual void TakeDamage(float amount)
+    {
+        Health = Health - amount;
+        if (Health <= 0)
+        {
+            Die();
+        }
+    }
+
+    protected virtual void Die()
+    {
+        Destroy(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +46,9 @@ public class ShipController : MonoBehaviour
         var input = Game.Input.Standard;
 
         anchor.Translate(Vector3.up * moveSpeed * input.MoveUp.ReadValue<float>() * Time.deltaTime);
-        anchor.Translate(Vector3.up * -moveSpeed * input.MoveDown.ReadValue<float>() * Time.deltaTime);
+        anchor.Translate(Vector3.down * moveSpeed * input.MoveDown.ReadValue<float>() * Time.deltaTime);
+        anchor.Translate(Vector3.right * moveSpeed * input.MoveRight.ReadValue<float>() * Time.deltaTime);
+        anchor.Translate(Vector3.left * moveSpeed * input.MoveLeft.ReadValue<float>() * Time.deltaTime);
 
         // keep us on screen
         anchorPos.Set(anchor.position.x, Mathf.Clamp(anchor.position.y, -5f, 5f), anchor.position.z);
