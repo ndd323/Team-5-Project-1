@@ -9,6 +9,7 @@ public class Asteroid : Enemy
     public float startSize = 1;
 
     private float size = 1;
+    //private float size = 1;
     
     public float Size
     {
@@ -36,6 +37,11 @@ public class Asteroid : Enemy
         float moveSpeed = Game.Instance.scrollSpeed;
 
         transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
+
+        if (transform.position.x < -20)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
