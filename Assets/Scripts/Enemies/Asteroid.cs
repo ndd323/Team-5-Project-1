@@ -7,13 +7,8 @@ public class Asteroid : Enemy
     public float damage = 1;
     
     public float startSize = 1;
-
-<<<<<<< HEAD
-    //private float size = 1;
-    
-=======
     public float size = 1;
->>>>>>> a518e14169e6d0290b14555ad239cd3bd02e65e9
+
     public float Size
     {
         get { return size; }
