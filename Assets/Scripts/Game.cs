@@ -8,20 +8,29 @@ public class Game : MonoBehaviour
     public static ShipControls Input { get; private set; }
     public float scrollSpeed { get; private set; } // speed of our ship going right (everything else scrolling past it)
 
+    public Canvas UI; // prefab for the player ship
+
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
 
         Input = new ShipControls();
-        Input.Enable();
 
-        scrollSpeed = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void startGame(GameObject MainMenu)
+    {   
+        MainMenu.SetActive(false);
+        Input.Enable();
+
+        scrollSpeed = 10;
+
     }
 }
