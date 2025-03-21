@@ -62,6 +62,24 @@ public partial class @ShipControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""7a02d65e-9aa2-408d-b304-e8cfc5a5cb0f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""c7e889cd-fdde-418f-a65a-b6c7e0fb30ca"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -152,6 +170,50 @@ public partial class @ShipControls: IInputActionCollection2, IDisposable
                     ""action"": ""ShootMissile"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""213045b4-b1d1-4265-b55d-1f640675d272"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ef5eb81-af21-42c2-bfc5-a91608d8846d"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7d1ba4b4-ee95-4ad8-80fc-1cdf09de1979"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17be9a98-e85a-427d-897f-03fbc15aab88"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -164,6 +226,8 @@ public partial class @ShipControls: IInputActionCollection2, IDisposable
         m_Standard_MoveDown = m_Standard.FindAction("MoveDown", throwIfNotFound: true);
         m_Standard_ShootBullet = m_Standard.FindAction("ShootBullet", throwIfNotFound: true);
         m_Standard_ShootMissile = m_Standard.FindAction("ShootMissile", throwIfNotFound: true);
+        m_Standard_MoveRight = m_Standard.FindAction("MoveRight", throwIfNotFound: true);
+        m_Standard_MoveLeft = m_Standard.FindAction("MoveLeft", throwIfNotFound: true);
     }
 
     ~@ShipControls()
@@ -234,6 +298,8 @@ public partial class @ShipControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Standard_MoveDown;
     private readonly InputAction m_Standard_ShootBullet;
     private readonly InputAction m_Standard_ShootMissile;
+    private readonly InputAction m_Standard_MoveRight;
+    private readonly InputAction m_Standard_MoveLeft;
     public struct StandardActions
     {
         private @ShipControls m_Wrapper;
@@ -242,6 +308,8 @@ public partial class @ShipControls: IInputActionCollection2, IDisposable
         public InputAction @MoveDown => m_Wrapper.m_Standard_MoveDown;
         public InputAction @ShootBullet => m_Wrapper.m_Standard_ShootBullet;
         public InputAction @ShootMissile => m_Wrapper.m_Standard_ShootMissile;
+        public InputAction @MoveRight => m_Wrapper.m_Standard_MoveRight;
+        public InputAction @MoveLeft => m_Wrapper.m_Standard_MoveLeft;
         public InputActionMap Get() { return m_Wrapper.m_Standard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -263,6 +331,12 @@ public partial class @ShipControls: IInputActionCollection2, IDisposable
             @ShootMissile.started += instance.OnShootMissile;
             @ShootMissile.performed += instance.OnShootMissile;
             @ShootMissile.canceled += instance.OnShootMissile;
+            @MoveRight.started += instance.OnMoveRight;
+            @MoveRight.performed += instance.OnMoveRight;
+            @MoveRight.canceled += instance.OnMoveRight;
+            @MoveLeft.started += instance.OnMoveLeft;
+            @MoveLeft.performed += instance.OnMoveLeft;
+            @MoveLeft.canceled += instance.OnMoveLeft;
         }
 
         private void UnregisterCallbacks(IStandardActions instance)
@@ -279,6 +353,12 @@ public partial class @ShipControls: IInputActionCollection2, IDisposable
             @ShootMissile.started -= instance.OnShootMissile;
             @ShootMissile.performed -= instance.OnShootMissile;
             @ShootMissile.canceled -= instance.OnShootMissile;
+            @MoveRight.started -= instance.OnMoveRight;
+            @MoveRight.performed -= instance.OnMoveRight;
+            @MoveRight.canceled -= instance.OnMoveRight;
+            @MoveLeft.started -= instance.OnMoveLeft;
+            @MoveLeft.performed -= instance.OnMoveLeft;
+            @MoveLeft.canceled -= instance.OnMoveLeft;
         }
 
         public void RemoveCallbacks(IStandardActions instance)
@@ -302,5 +382,7 @@ public partial class @ShipControls: IInputActionCollection2, IDisposable
         void OnMoveDown(InputAction.CallbackContext context);
         void OnShootBullet(InputAction.CallbackContext context);
         void OnShootMissile(InputAction.CallbackContext context);
+        void OnMoveRight(InputAction.CallbackContext context);
+        void OnMoveLeft(InputAction.CallbackContext context);
     }
 }

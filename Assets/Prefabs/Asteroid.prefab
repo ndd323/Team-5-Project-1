@@ -194,4 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  damage: 1
   startSize: 1
+  size: 1

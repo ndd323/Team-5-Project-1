@@ -194,3 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  amplitude: 3
+  frequency: 1
+  phaseShift: 0
+  anchor: {fileID: 0}
