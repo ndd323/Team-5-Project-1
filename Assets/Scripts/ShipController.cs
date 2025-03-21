@@ -20,7 +20,7 @@ public class ShipController : MonoBehaviour, IDamageable
 
     public float Health { get; protected set; }
 
-    public virtual void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount, GameObject source)
     {
         Health = Health - amount;
         if (Health <= 0)
