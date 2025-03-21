@@ -6,7 +6,7 @@ public class Asteroid : Enemy
 {
     public float startSize = 1;
 
-    private float size = 1;
+    public float size = 1;
     public float Size
     {
         get { return size; }
