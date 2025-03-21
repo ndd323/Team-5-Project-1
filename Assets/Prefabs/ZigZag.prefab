@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 6709727791177586953}
   - component: {fileID: 1861098907870758091}
   - component: {fileID: 1529936273462816763}
-  - component: {fileID: 7331997793584250650}
   m_Layer: 0
   m_Name: ZigZag
   m_TagString: Untagged
@@ -199,17 +198,3 @@ MonoBehaviour:
   frequency: 1
   phaseShift: 0
   anchor: {fileID: 0}
---- !u!114 &7331997793584250650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6234046877337173789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92d9d00131237cc4b9e7989d51e9d8aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pHealth: {fileID: 0}
-  dmg: 34

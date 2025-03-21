@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 7475733288456771829}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,6 +259,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4394988520475183569, guid: 1428eaf373d11414ca6e9789625d724d, type: 3}
   missilePrefab: {fileID: 4394988520475183569, guid: 1428eaf373d11414ca6e9789625d724d, type: 3}
   anchor: {fileID: 6253334131044884107}
+  maxHealth: 5
 --- !u!1 &6096889623500505352
 GameObject:
   m_ObjectHideFlags: 0
