@@ -8,10 +8,14 @@ public class shooter : Enemy
     public float frequency = 1;
     public float phaseShift = 0;
     public Transform anchor;
+    public Transform shootPoint;
+    public GameObject bulletPrefab;
+    public float shootingInterval = 2f;
 
     protected override void Start()
     {
         if (anchor == null) anchor = transform;
+        InvokeRepeating("Shoot", 0f, shootingInterval);
     }
 
     protected override void Update()
@@ -26,5 +30,9 @@ public class shooter : Enemy
             Destroy(gameObject);
         }
         
+    }
+
+    void Shoot() {
+        Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
     }
 }
