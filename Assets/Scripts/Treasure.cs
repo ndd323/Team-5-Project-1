@@ -5,6 +5,16 @@ using UnityEngine;
 public class Treasure : MonoBehaviour
 {
     public float score_value = 100;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var collided = collision.gameObject;
+
+        if (collided.GetComponent<ICollectable>() != null)
+        {
+            collided.GetComponent<ICollectable>().CollectScore(score_value, gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipController : MonoBehaviour, IDamageable
+public class ShipController : MonoBehaviour, IDamageable, ICollectable
 {
     public float moveSpeed;
     public float shootDelay = .5f;
@@ -20,6 +20,8 @@ public class ShipController : MonoBehaviour, IDamageable
 
     public float Health { get; protected set; }
 
+    public float player_score = 0;
+
     public virtual void TakeDamage(float amount, GameObject source)
     {
         Health = Health - amount;
@@ -27,6 +29,11 @@ public class ShipController : MonoBehaviour, IDamageable
         {
             Die();
         }
+    }
+
+    public virtual void CollectScore(float value, GameObject source)
+    {
+        player_score += value;
     }
 
     protected virtual void Die()
