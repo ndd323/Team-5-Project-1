@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ZigZag : Enemy
 {
+    public float damage = 1;
     public float amplitude = 10;
     public float frequency = 2;
     public float phaseShift = 0;
@@ -26,5 +27,14 @@ public class ZigZag : Enemy
             Destroy(gameObject);
         }
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var collided = collision.gameObject;
+
+        if (collided.GetComponent<IDamageable>() != null)
+        {
+            collided.GetComponent<IDamageable>().TakeDamage(damage, gameObject);
+        }
     }
 }
