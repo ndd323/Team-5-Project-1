@@ -15,6 +15,7 @@ public class Asteroid : Enemy
         set
         {
             size = value;
+            startSize = size;
             ChangeSize(size);
         }
     }
@@ -44,12 +45,11 @@ public class Asteroid : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Ship damaged!!!");
         var collided = collision.gameObject;
 
         if (collided.GetComponent<IDamageable>() != null)
         {
-            collided.GetComponent<IDamageable>().TakeDamage(damage);
+            collided.GetComponent<IDamageable>().TakeDamage(damage, gameObject);
         }
     }
 }

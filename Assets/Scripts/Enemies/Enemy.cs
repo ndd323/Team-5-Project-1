@@ -8,8 +8,9 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
     public float Health { get; protected set; }
 
-    public virtual void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount, GameObject source)
     {
+        if (!source.CompareTag("Player")) return;
         Health = Health - amount;
         if (Health <= 0)
         {
