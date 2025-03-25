@@ -15,8 +15,14 @@ MonoBehaviour:
   spawns:
   - {fileID: 11400000, guid: ee545ece3a9c45b4aab3253cce37d40f, type: 2}
   - {fileID: 11400000, guid: a35823e23fea9ea4aa89e56b0b40f162, type: 2}
+  - {fileID: 11400000, guid: f42d11ee4686963458c3a365cebca5fc, type: 2}
   - {fileID: 11400000, guid: a8e972c20d638444e91391389e377750, type: 2}
   - {fileID: 11400000, guid: 11847a2c9026c7a4ab156681e37bf20b, type: 2}
+  - {fileID: 11400000, guid: 14b5ed31275750a47a05ea53cfc8a4b4, type: 2}
+  - {fileID: 11400000, guid: 8f87ebc5a15430b4393493389e10852a, type: 2}
+  - {fileID: 11400000, guid: 370bece079e8c064ba97872169240f44, type: 2}
+  - {fileID: 11400000, guid: 90562a311b09cc949ba802b533201b89, type: 2}
+  - {fileID: 11400000, guid: 49a40d13d9bc3e7488446fbc9d0e7bec, type: 2}
   entityAmountCurve:
     serializedVersion: 2
     m_Curve: []
