@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ee545ece3a9c45b4aab3253cce37d40f, type: 2}
   - {fileID: 11400000, guid: c4f0b50bc4d922244b4f570b2a3f0d63, type: 2}
   - {fileID: 11400000, guid: 11847a2c9026c7a4ab156681e37bf20b, type: 2}
-  - {fileID: 11400000, guid: ab7d24c9c8443244cb99b9b53f271009, type: 2}
+  - {fileID: 11400000, guid: a35823e23fea9ea4aa89e56b0b40f162, type: 2}
   entityAmountCurve:
     serializedVersion: 2
     m_Curve: []

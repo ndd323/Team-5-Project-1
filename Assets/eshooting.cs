@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class eshooting : MonoBehaviour
+public class eshooting : Enemy
 {
+    public float damage = 1f;
+
     private GameObject player;
     private Rigidbody2D rb;
     public float force;
+
     // Start is called before the first frame update
-    void Start() {
+    protected override void Start() {
+        base.Start();
+
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -19,7 +24,20 @@ public class eshooting : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    protected override void Update() 
+    {
+
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var collided = collision.gameObject;
+
+        if (collided.GetComponent<IDamageable>() != null)
+        {
+            if (!collided.CompareTag("Player")) return;
+            collided.GetComponent<IDamageable>().TakeDamage(damage, gameObject);
+            Die();
+        }
+    }
 }

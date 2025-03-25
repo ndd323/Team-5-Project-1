@@ -15,6 +15,8 @@ MonoBehaviour:
   spawns:
   - {fileID: 11400000, guid: ee545ece3a9c45b4aab3253cce37d40f, type: 2}
   - {fileID: 11400000, guid: a35823e23fea9ea4aa89e56b0b40f162, type: 2}
+  - {fileID: 11400000, guid: a8e972c20d638444e91391389e377750, type: 2}
+  - {fileID: 11400000, guid: 11847a2c9026c7a4ab156681e37bf20b, type: 2}
   entityAmountCurve:
     serializedVersion: 2
     m_Curve: []
@@ -22,5 +24,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   stageLength: 60
-  stageSpawnTimeMod: 1
+  stageSpawnTimeMod: 0.8
   stageColor: {r: 0.29290652, g: 0.17913403, b: 0.3915094, a: 1}

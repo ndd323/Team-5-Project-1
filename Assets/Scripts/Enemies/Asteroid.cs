@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class Asteroid : Enemy
 {
@@ -49,6 +50,7 @@ public class Asteroid : Enemy
 
         if (collided.GetComponent<IDamageable>() != null)
         {
+            if (!collided.CompareTag("Player")) return;
             collided.GetComponent<IDamageable>().TakeDamage(damage, gameObject);
             Die();
         }

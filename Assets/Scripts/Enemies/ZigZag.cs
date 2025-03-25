@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class ZigZag : Enemy
 {
@@ -34,6 +35,7 @@ public class ZigZag : Enemy
 
         if (collided.GetComponent<IDamageable>() != null)
         {
+            if (!collided.CompareTag("Player")) return;
             collided.GetComponent<IDamageable>().TakeDamage(damage, gameObject);
         }
     }

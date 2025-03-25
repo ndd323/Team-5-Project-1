@@ -17,8 +17,15 @@ public class AsteroidPirate : Enemy
     {
         transform.position = Vector3.MoveTowards(transform.position, nextPoint, moveSpeed * Time.deltaTime);//transform.Translate(nextPoint * moveSpeed * Time.deltaTime);
 
+        if ((transform.position - nextPoint).sqrMagnitude <= .1f)
+        {
+            nextPoint.y = -nextPoint.y;
+        }
+
         if (nextAsteroid <= Time.time)
         {
+            nextAsteroid = Time.time + Random.Range(asteroidSpawnMin, asteroidSpawnMax);
+
             var newAsteroid = Instantiate(asteroid);
             newAsteroid.transform.position = transform.position + Vector3.left * 1f;
         }
