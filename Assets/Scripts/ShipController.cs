@@ -11,6 +11,9 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
     public Transform anchor;
     public float player_score = 0;
 
+    public TMPro.TextMeshProUGUI score;
+    public TMPro.TextMeshProUGUI gameOver;
+
     private Vector3 anchorPos; // avoids allocating memory to a new Vec3 every frame
     private float nextShoot;
     private Rigidbody2D rb;
@@ -77,6 +80,8 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
     public virtual void CollectScore(float value, GameObject source)
     {
         player_score += value;
+        score.text = player_score.ToString();
+        gameOver.text = player_score.ToString();
     }
 
     protected virtual void Die()

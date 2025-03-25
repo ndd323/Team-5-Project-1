@@ -13,6 +13,7 @@ public class Treasure : MonoBehaviour
         if (collided.GetComponent<ICollectable>() != null)
         {
             collided.GetComponent<ICollectable>().CollectScore(score_value, gameObject);
+            Destroy(gameObject);
         }
     }
     // Start is called before the first frame update

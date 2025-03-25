@@ -14,6 +14,10 @@ public class Game : MonoBehaviour
 
     public GameObject HUD;
 
+    public float highScore = 0f;
+    public TMPro.TextMeshProUGUI highScoreText;
+    public TMPro.TextMeshProUGUI mainMenuText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,13 @@ public class Game : MonoBehaviour
         Input = new ShipControls();
         //TestStart();
 
+    }
+
+    public void UpdateScore(float score)
+    {
+        if (score > highScore) highScore = score;
+        highScoreText.text = highScore.ToString();
+        mainMenuText.text = highScore.ToString();
     }
 
     // Update is called once per frame
@@ -51,6 +62,7 @@ public class Game : MonoBehaviour
         Input.Disable();
         HUD.SetActive(false);
         deathScreen.SetActive(true);
+        UpdateScore(playerPrefab.GetComponentInChildren<ShipController>().player_score);
     }
 
     public void restartGame()
