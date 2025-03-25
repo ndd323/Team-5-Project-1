@@ -9,6 +9,7 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
     public GameObject bulletPrefab;
     public GameObject missilePrefab;
     public Transform anchor;
+    public float player_score = 0;
 
     private Vector3 anchorPos; // avoids allocating memory to a new Vec3 every frame
     private float nextShoot;
@@ -30,8 +31,6 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
             health = Mathf.Clamp(value, 0f, maxHealth);
         }
     }
-
-    public float player_score = 0;
 
     public void PickupHealth(float amount)
     {
