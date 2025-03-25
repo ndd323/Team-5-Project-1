@@ -38,7 +38,11 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
 
     protected virtual void Die()
     {
-        Destroy(gameObject);
+        Game.Instance.endGame();
+
+        // Move the player off screen
+        transform.position = new Vector3(-100, -100, 0);
+
     }
 
     // Start is called before the first frame update
@@ -75,5 +79,11 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
             var missile = Instantiate(missilePrefab);
             missile.transform.position = transform.position + (Vector3.right * 1.3f);
         }
+    }
+
+    public void restartGame()
+    {
+        Health = maxHealth;
+        transform.position = new Vector3(-5, 0, 0);
     }
 }

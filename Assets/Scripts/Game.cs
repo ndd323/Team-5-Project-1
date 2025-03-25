@@ -8,7 +8,11 @@ public class Game : MonoBehaviour
     public static ShipControls Input { get; private set; }
     public float scrollSpeed { get; private set; } // speed of our ship going right (everything else scrolling past it)
 
-    public Canvas UI; // prefab for the player ship
+    public GameObject playerPrefab;
+
+    public GameObject deathScreen;
+
+    public GameObject HUD;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +32,11 @@ public class Game : MonoBehaviour
 
     public void startGame(GameObject MainMenu)
     {   
+        //start the player at the start position
         MainMenu.SetActive(false);
         Input.Enable();
-
         scrollSpeed = 10;
+        HUD.SetActive(true);
 
     }
 
@@ -39,5 +44,30 @@ public class Game : MonoBehaviour
     {
         Input.Enable();
         scrollSpeed = 10;
+    }
+    
+    public void endGame()
+    {
+        Input.Disable();
+        HUD.SetActive(false);
+        deathScreen.SetActive(true);
+    }
+
+    public void restartGame()
+    {
+        deathScreen.SetActive(false);        
+        // run the player start function again
+        Input.Enable();
+        HUD.SetActive(true);
+        playerPrefab.GetComponent<ShipController>().restartGame();
+
+
+    }
+
+    public void gotomainMenu()
+    {
+        deathScreen.SetActive(false);
+        HUD.SetActive(false);
+        Input.Disable();
     }
 }
