@@ -33,6 +33,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  stageLength: 90
+  stageLength: 60
   stageSpawnTimeMod: 0.8
   stageColor: {r: 0.4204861, g: 0.23604932, b: 0.48584908, a: 1}
