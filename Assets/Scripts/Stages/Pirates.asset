@@ -23,6 +23,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 370bece079e8c064ba97872169240f44, type: 2}
   - {fileID: 11400000, guid: 90562a311b09cc949ba802b533201b89, type: 2}
   - {fileID: 11400000, guid: 49a40d13d9bc3e7488446fbc9d0e7bec, type: 2}
+  - {fileID: 11400000, guid: a39d2d0ce88bcd245861a2fe4199ef08, type: 2}
+  - {fileID: 11400000, guid: 3cabf208c27d6874db357a48bdb694f3, type: 2}
+  - {fileID: 11400000, guid: fc5086c9f6bd6724fbeaaa3e0b6e62fa, type: 2}
+  - {fileID: 11400000, guid: 4340c5eaed81dbb46b81dccd8d2c0425, type: 2}
   entityAmountCurve:
     serializedVersion: 2
     m_Curve: []
