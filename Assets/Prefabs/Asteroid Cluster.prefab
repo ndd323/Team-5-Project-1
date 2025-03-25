@@ -121,6 +121,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3827565824816884740, guid: 3474f8f8bb6d4479cb96acfd68fc6e7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.36725986
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827565824816884740, guid: 3474f8f8bb6d4479cb96acfd68fc6e7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827565824816884740, guid: 3474f8f8bb6d4479cb96acfd68fc6e7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827565824816884740, guid: 3474f8f8bb6d4479cb96acfd68fc6e7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.9301184
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827565824816884740, guid: 3474f8f8bb6d4479cb96acfd68fc6e7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -136.907
+      objectReference: {fileID: 0}
     - target: {fileID: 4102069278549734915, guid: 3474f8f8bb6d4479cb96acfd68fc6e7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.31

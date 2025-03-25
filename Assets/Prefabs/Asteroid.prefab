@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.098438, y: 0.098438, z: 0.098438}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3512424549235980505}
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 4894842905725733652, guid: b27ba7a424ebf4f2785e5ff7c9502335, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.99, y: 10.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3512424549235980505}
   - component: {fileID: 6709727791177586953}
-  - component: {fileID: 1861098907870758091}
+  - component: {fileID: 1113395792765809549}
   - component: {fileID: 3405662939771150358}
   m_Layer: 0
   m_Name: Asteroid
@@ -146,8 +146,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1861098907870758091
-CircleCollider2D:
+--- !u!60 &1113395792765809549
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -179,8 +179,38 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.072891176, y: 0.5366206}
+      - {x: -0.27941674, y: 0.3767016}
+      - {x: -0.4367965, y: 0.35724103}
+      - {x: -0.3922746, y: 0.25468588}
+      - {x: -0.534469, y: 0.16376662}
+      - {x: -0.40763098, y: 0.022768386}
+      - {x: -0.45674503, y: -0.058785424}
+      - {x: -0.3762704, y: -0.14384705}
+      - {x: -0.42994535, y: -0.29681644}
+      - {x: -0.24017106, y: -0.34989378}
+      - {x: -0.15338033, y: -0.48968092}
+      - {x: -0.045664668, y: -0.40357697}
+      - {x: 0.29244047, y: -0.530074}
+      - {x: 0.28304535, y: -0.41315454}
+      - {x: 0.51294726, y: -0.35344547}
+      - {x: 0.41945136, y: -0.22030881}
+      - {x: 0.5272622, y: -0.0643775}
+      - {x: 0.3600361, y: 0.15507868}
+      - {x: 0.45762262, y: 0.32079554}
+      - {x: 0.13363445, y: 0.4079408}
+  m_UseDelaunayMesh: 0
 --- !u!114 &3405662939771150358
 MonoBehaviour:
   m_ObjectHideFlags: 0
