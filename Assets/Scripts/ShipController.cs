@@ -109,6 +109,7 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
     {
         var input = Game.Input.Standard;
 
+        print("SHIT " + health + " " + maxHealth + " " + health / maxHealth);
         healthBar.fillAmount = Mathf.Clamp(Health / maxHealth, 0f, 1f);
 
         anchor.Translate(Vector3.up * moveSpeed * input.MoveUp.ReadValue<float>() * Time.deltaTime);
@@ -148,6 +149,7 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
 
     public void restartGame()
     {
+        print("RESTARTING");
         Health = maxHealth;
         transform.position = new Vector3(-5, 0, 0);
     }
