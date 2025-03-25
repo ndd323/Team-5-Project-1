@@ -466,7 +466,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5c6c4eeebc97f438e864d8bf98d2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UI: {fileID: 0}
+  playerPrefab: {fileID: 0}
+  deathScreen: {fileID: 0}
+  HUD: {fileID: 0}
 --- !u!4 &1060596100
 Transform:
   m_ObjectHideFlags: 0
@@ -496,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stages:
   - {fileID: 11400000, guid: 18ab6665f96554d47b1f4ce29307ccd1, type: 2}
+  stageBackground: {fileID: 0}
 --- !u!1 &1152380435
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +694,7 @@ Transform:
   m_GameObject: {fileID: 1972403405}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.348934, y: 4.904789, z: -0.072278194}
+  m_LocalPosition: {x: 0.77, y: 0.05, z: -0.072278194}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -757,7 +760,7 @@ PrefabInstance:
     - target: {fileID: 7835521611450598498, guid: 896245fb623af8747bfa132115e2bbab, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 4394988520475183569, guid: 1428eaf373d11414ca6e9789625d724d, type: 3}
+      objectReference: {fileID: 3880721209242533823, guid: ad7b934cb9c39754a8193f2e36b946ce, type: 3}
     - target: {fileID: 8425610638981465203, guid: 896245fb623af8747bfa132115e2bbab, type: 3}
       propertyPath: m_Name
       value: shooter
