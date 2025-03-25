@@ -72,6 +72,7 @@ public class Game : MonoBehaviour
         Input.Enable();
         HUD.SetActive(true);
         playerPrefab.GetComponentInChildren<ShipController>().restartGame();
+        GetComponent<StageManager>().Restart();
 
 
     }

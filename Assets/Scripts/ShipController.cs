@@ -149,8 +149,9 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
 
     public void restartGame()
     {
-        print("RESTARTING");
-        Health = maxHealth;
+        print("RESTARTING " + maxHealth + " " + Health + " " + health);
+        Health = 10;
+        print("RESTARTING 2 " + maxHealth + " " + Health + " " + health);
         transform.position = new Vector3(-5, 0, 0);
     }
 }
