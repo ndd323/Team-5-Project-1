@@ -404,6 +404,7 @@ MonoBehaviour:
   stages:
   - {fileID: 11400000, guid: 18ab6665f96554d47b1f4ce29307ccd1, type: 2}
   - {fileID: 11400000, guid: 22d4a88f4d831934db7aad72086f5a70, type: 2}
+  - {fileID: 11400000, guid: 54f60b1d9ca41874eb35b1eb8379e71e, type: 2}
   stageBackground: {fileID: 1967200272}
 --- !u!1 &1967200271
 GameObject:
@@ -613,11 +614,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2541280555460198595, guid: 919eb293d4e993140bf4a89854746286, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.39
+      value: 8.29
       objectReference: {fileID: 0}
     - target: {fileID: 2541280555460198595, guid: 919eb293d4e993140bf4a89854746286, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 3.71
       objectReference: {fileID: 0}
     - target: {fileID: 2541280555460198595, guid: 919eb293d4e993140bf4a89854746286, type: 3}
       propertyPath: m_LocalPosition.z
