@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b7deba4da8f8ed4691206b89f741566, type: 3}
-  m_Name: shooter
+  m_Name: bomber
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 8425610638981465203, guid: 896245fb623af8747bfa132115e2bbab, type: 3}
+  spawnPrefab: {fileID: 3956440034976783123, guid: 9caeabc8e73b9534aa8ec2539f2f6d1a, type: 3}
   spawnCurve:
     serializedVersion: 2
     m_Curve: []
