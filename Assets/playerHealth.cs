@@ -15,6 +15,6 @@ public class playerHealth : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 1);  
+        healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0f, 1f);  
     }
 }

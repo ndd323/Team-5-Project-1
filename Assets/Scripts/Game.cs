@@ -20,7 +20,7 @@ public class Game : MonoBehaviour
         Instance = this;
 
         Input = new ShipControls();
-        TestStart();
+        //TestStart();
 
     }
 
