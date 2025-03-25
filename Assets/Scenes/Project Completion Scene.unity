@@ -1071,6 +1071,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1451824176}
     - target: {fileID: 7475733288456771829, guid: ba6ce672a68619546a0af2714ad8bd69, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 183833551}
+    - target: {fileID: 7475733288456771829, guid: ba6ce672a68619546a0af2714ad8bd69, type: 3}
       propertyPath: shootDelay
       value: 0.5
       objectReference: {fileID: 0}
