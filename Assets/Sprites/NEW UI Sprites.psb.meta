@@ -101,8 +101,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2897
-      y: 939
+      x: 2076
+      y: 1994
       width: 1068
       height: 500
     spriteID: 4e7322606dfe14b06b71923368c987e6
@@ -113,7 +113,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 2897, y: 939}
+    uvTransform: {x: 2076, y: 1994}
     spritePosition: {x: 491, y: 378}
   - name: Shooter Enemy
     originalName: 
@@ -122,8 +122,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 0
-      y: 7171
+      x: 1930
+      y: 0
       width: 1273
       height: 675
     spriteID: 97faef4588c5d42faabee79734e1ca00
@@ -134,71 +134,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 0, y: 7171}
+    uvTransform: {x: 1930, y: 0}
     spritePosition: {x: 388, y: 908}
-  - name: Background near
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1920
-      height: 1080
-    spriteID: ff576755ccfdb4843aab5ad3785f6d51
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-    spritePosition: {x: 74, y: 481}
-  - name: Background mid
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 0
-      y: 1080
-      width: 1917
-      height: 1080
-    spriteID: a82f661e5e46f4969a0065d27cab5a51
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 1080}
-    spritePosition: {x: 74, y: 481}
-  - name: background Far
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 0
-      y: 2160
-      width: 1920
-      height: 1080
-    spriteID: 70b7a58593dbe47749e8d86ebaeafdcd
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 2160}
-    spritePosition: {x: 74, y: 481}
   - name: Explosion 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -206,8 +143,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 0
-      y: 6344
+      x: 2346
+      y: 939
       width: 0
       height: 0
     spriteID: 63bd12b2e7d5747b995a74072bead091
@@ -218,7 +155,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 0, y: 6344}
+    uvTransform: {x: 2346, y: 939}
     spritePosition: {x: 464, y: 523}
   - name: Explosion 1
     originalName: 
@@ -227,8 +164,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 0
-      y: 5385
+      x: 1242
+      y: 939
       width: 1104
       height: 959
     spriteID: 375d63da6ff1d42a0b605f07780019ee
@@ -239,7 +176,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 0, y: 5385}
+    uvTransform: {x: 1242, y: 939}
     spritePosition: {x: 451, y: 455}
   - name: Treasure small
     originalName: 
@@ -248,8 +185,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1273
-      y: 7651
+      x: 3624
+      y: 1994
       width: 458
       height: 389
     spriteID: 9797e3550cf1d4ca18b388ce02fb60a9
@@ -260,7 +197,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1273, y: 7651}
+    uvTransform: {x: 3624, y: 1994}
     spritePosition: {x: 549, y: 864}
   - name: Treasure Medium
     originalName: 
@@ -269,8 +206,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1922
-      y: 1670
+      x: 2078
+      y: 2494
       width: 952
       height: 557
     spriteID: c1586243152c14f61a80d6f7dda8d6f0
@@ -281,7 +218,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1920, y: 1670}
+    uvTransform: {x: 2076, y: 2494}
     spritePosition: {x: 401, y: 918}
   - name: Treasure Large
     originalName: 
@@ -290,8 +227,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1922
-      y: 939
+      x: 1101
+      y: 1994
       width: 975
       height: 731
     spriteID: 899b3190c1721434cb0d59ffd0a57314
@@ -302,7 +239,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1920, y: 939}
+    uvTransform: {x: 1099, y: 1994}
     spritePosition: {x: 425, y: 737}
   - name: Astroid
     originalName: 
@@ -312,7 +249,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 0
-      y: 4295
+      y: 1994
       width: 1099
       height: 1090
     spriteID: 29427189621764514a852692121a8955
@@ -323,7 +260,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 0, y: 4295}
+    uvTransform: {x: 0, y: 1994}
     spritePosition: {x: 346, y: 676}
   - name: Astroid 1
     originalName: 
@@ -333,7 +270,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 0
-      y: 3240
+      y: 939
       width: 1242
       height: 1055
     spriteID: bfafec98c7b0b41b5924c5fb110d8c01
@@ -344,7 +281,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 0, y: 3240}
+    uvTransform: {x: 0, y: 939}
     spritePosition: {x: 309, y: 520}
   - name: Player
     originalName: 
@@ -353,7 +290,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1920
+      x: 0
       y: 0
       width: 1930
       height: 939
@@ -365,7 +302,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1920, y: 0}
+    uvTransform: {x: 0, y: 0}
     spritePosition: {x: 59, y: 1076}
   - name: NEW Button Corners
     originalName: 
@@ -374,8 +311,8 @@ ScriptedImporter:
     border: {x: 164, y: 161, z: 152, w: 157}
     rect:
       serializedVersion: 2
-      x: 1087
-      y: 6344
+      x: 3144
+      y: 1994
       width: 480
       height: 480
     spriteID: 71bb4f988b60546bd92f4e424ce85d07
@@ -386,7 +323,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1087, y: 6344}
+    uvTransform: {x: 3144, y: 1994}
     spritePosition: {x: 830, y: 1391}
   - name: NEW Button Center
     originalName: 
@@ -395,8 +332,8 @@ ScriptedImporter:
     border: {x: 179, y: 228, z: 169, w: 184}
     rect:
       serializedVersion: 2
-      x: 1273
-      y: 7171
+      x: 3030
+      y: 2494
       width: 480
       height: 480
     spriteID: 5946981941b644154be4cdcd5de98281
@@ -407,8 +344,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1273, y: 7171}
+    uvTransform: {x: 3030, y: 2494}
     spritePosition: {x: 1450, y: 1437}
+  - name: Explosion 2 real
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2347
+      y: 936
+      width: 1086
+      height: 829
+    spriteID: 2aaa7f0a063bd409380ef55f13b8d6c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2347, y: 936}
+    spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
     parts: []
@@ -499,7 +457,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 4e7322606dfe14b06b71923368c987e6
     layerID: 41
-    mosaicPosition: {x: 2897, y: 939}
+    mosaicPosition: {x: 2076, y: 1994}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -509,7 +467,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 97faef4588c5d42faabee79734e1ca00
     layerID: 38
-    mosaicPosition: {x: 0, y: 7171}
+    mosaicPosition: {x: 1930, y: 0}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -522,7 +480,7 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 1
+    isVisible: 0
   - name: Background near
     spriteName: Background near
     isGroup: 0
@@ -531,7 +489,7 @@ ScriptedImporter:
     layerID: 32
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Background mid
     spriteName: Background mid
@@ -541,7 +499,7 @@ ScriptedImporter:
     layerID: 31
     mosaicPosition: {x: 0, y: 1080}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: background Far
     spriteName: background Far
@@ -551,7 +509,7 @@ ScriptedImporter:
     layerID: 33
     mosaicPosition: {x: 0, y: 2160}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Explosion 2
     spriteName: Explosion 2
@@ -559,7 +517,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 63bd12b2e7d5747b995a74072bead091
     layerID: 29
-    mosaicPosition: {x: 0, y: 6344}
+    mosaicPosition: {x: 2346, y: 939}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -569,7 +527,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 375d63da6ff1d42a0b605f07780019ee
     layerID: 28
-    mosaicPosition: {x: 0, y: 5385}
+    mosaicPosition: {x: 1242, y: 939}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -579,7 +537,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 9797e3550cf1d4ca18b388ce02fb60a9
     layerID: 27
-    mosaicPosition: {x: 1273, y: 7651}
+    mosaicPosition: {x: 3624, y: 1994}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -589,7 +547,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: c1586243152c14f61a80d6f7dda8d6f0
     layerID: 26
-    mosaicPosition: {x: 1920, y: 1670}
+    mosaicPosition: {x: 2076, y: 2494}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -599,7 +557,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 899b3190c1721434cb0d59ffd0a57314
     layerID: 23
-    mosaicPosition: {x: 1920, y: 939}
+    mosaicPosition: {x: 1099, y: 1994}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -609,7 +567,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 29427189621764514a852692121a8955
     layerID: 22
-    mosaicPosition: {x: 0, y: 4295}
+    mosaicPosition: {x: 0, y: 1994}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -619,7 +577,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: bfafec98c7b0b41b5924c5fb110d8c01
     layerID: 21
-    mosaicPosition: {x: 0, y: 3240}
+    mosaicPosition: {x: 0, y: 939}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -629,7 +587,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: a4d1789ce104c4e45b1f4522c572c2d2
     layerID: 19
-    mosaicPosition: {x: 1920, y: 0}
+    mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -639,7 +597,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 71bb4f988b60546bd92f4e424ce85d07
     layerID: 9
-    mosaicPosition: {x: 1087, y: 6344}
+    mosaicPosition: {x: 3144, y: 1994}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -649,7 +607,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 5946981941b644154be4cdcd5de98281
     layerID: 13
-    mosaicPosition: {x: 1273, y: 7171}
+    mosaicPosition: {x: 3030, y: 2494}
     flatten: 0
     isImported: 1
     isVisible: 1
