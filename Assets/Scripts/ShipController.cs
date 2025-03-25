@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour, IDamageable, ICollectable
 {
@@ -10,6 +11,8 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
     public GameObject missilePrefab;
     public Transform anchor;
     public float player_score = 0;
+
+    public Image healthBar;
 
     public TMPro.TextMeshProUGUI score;
     public TMPro.TextMeshProUGUI gameOver;
@@ -26,7 +29,7 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
 
     public ShipControls Input { get; private set; }
 
-    public float maxHealth = 5;
+    public float maxHealth = 10;
 
     public float Health { get { return health; }
         protected set
@@ -82,6 +85,7 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
         player_score += value;
         score.text = player_score.ToString();
         gameOver.text = player_score.ToString();
+        Game.Instance.UpdateScore(player_score);
     }
 
     protected virtual void Die()
@@ -104,6 +108,8 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
     void Update()
     {
         var input = Game.Input.Standard;
+
+        healthBar.fillAmount = Mathf.Clamp(Health / maxHealth, 0f, 1f);
 
         anchor.Translate(Vector3.up * moveSpeed * input.MoveUp.ReadValue<float>() * Time.deltaTime);
         anchor.Translate(Vector3.down * moveSpeed * input.MoveDown.ReadValue<float>() * Time.deltaTime);
