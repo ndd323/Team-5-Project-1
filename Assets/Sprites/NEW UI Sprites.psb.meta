@@ -94,6 +94,48 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: Dmg Pick up
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 3084
+      width: 726
+      height: 648
+    spriteID: a3ba3e8012e14445ca0338a33865be9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 3084}
+    spritePosition: {x: 661, y: 700}
+  - name: Projectile pick up
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3203
+      y: 0
+      width: 726
+      height: 648
+    spriteID: dfac02ac6c9644bb5be2c9226be88524
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3203, y: 0}
+    spritePosition: {x: 627, y: 815}
   - name: Bomber enemy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -346,27 +388,6 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 3030, y: 2494}
     spritePosition: {x: 1450, y: 1437}
-  - name: Explosion 2 real
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 2347
-      y: 936
-      width: 1086
-      height: 829
-    spriteID: 2aaa7f0a063bd409380ef55f13b8d6c5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 2347, y: 936}
-    spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
     parts: []
@@ -451,6 +472,26 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Projectile pick up
+    spriteName: Projectile pick up
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dfac02ac6c9644bb5be2c9226be88524
+    layerID: 42
+    mosaicPosition: {x: 3203, y: 0}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Dmg Pick up
+    spriteName: Dmg Pick up
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a3ba3e8012e14445ca0338a33865be9b
+    layerID: 44
+    mosaicPosition: {x: 0, y: 3084}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Bomber enemy
     spriteName: Bomber enemy
     isGroup: 0
@@ -484,7 +525,7 @@ ScriptedImporter:
   - name: Background near
     spriteName: Background near
     isGroup: 0
-    parentIndex: 2
+    parentIndex: 4
     spriteID: ff576755ccfdb4843aab5ad3785f6d51
     layerID: 32
     mosaicPosition: {x: 0, y: 0}
@@ -494,7 +535,7 @@ ScriptedImporter:
   - name: Background mid
     spriteName: Background mid
     isGroup: 0
-    parentIndex: 2
+    parentIndex: 4
     spriteID: a82f661e5e46f4969a0065d27cab5a51
     layerID: 31
     mosaicPosition: {x: 0, y: 1080}
@@ -504,7 +545,7 @@ ScriptedImporter:
   - name: background Far
     spriteName: background Far
     isGroup: 0
-    parentIndex: 2
+    parentIndex: 4
     spriteID: 70b7a58593dbe47749e8d86ebaeafdcd
     layerID: 33
     mosaicPosition: {x: 0, y: 2160}
