@@ -17,8 +17,8 @@ public class Stage
     public float PauseTime { get; private set; }
     public float EndTime { get; private set; }
     public bool IsPaused { get; private set; }
-    public float SpawnTryDelay { get; private set; } = 3f; // how frequently we check spawn chances and queue
-    public float SpawnDoDelay { get; private set; } = .5f; // delay between spawning things in queue
+    public float SpawnTryDelay { get; private set; } = 7f; // how frequently we check spawn chances and queue
+    public float SpawnDoDelay { get; private set; } = .75f; // delay between spawning things in queue
 
     public Stage(StageInfo info)
     {
@@ -89,7 +89,7 @@ public class Stage
         if (Time.time >= spawnTryTime && !IsPaused)
         {
             TrySpawn();
-            spawnTryTime = Time.time + SpawnTryDelay;
+            spawnTryTime = Time.time + (SpawnTryDelay * Info.stageSpawnTimeMod);
         }
 
         if (Time.time >= spawnDoTime && spawnQueue.Count > 0)

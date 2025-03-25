@@ -22,7 +22,7 @@ public class Asteroid : Enemy
 
     private void ChangeSize(float newSize)
     {
-        Health = Mathf.Ceil(newSize / 2);
+        Health = Mathf.Ceil(newSize / 1.25f);
         transform.localScale = new Vector3(newSize, newSize, 1);
     }
 
@@ -50,6 +50,7 @@ public class Asteroid : Enemy
         if (collided.GetComponent<IDamageable>() != null)
         {
             collided.GetComponent<IDamageable>().TakeDamage(damage, gameObject);
+            Die();
         }
     }
 }

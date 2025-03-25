@@ -13,14 +13,58 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
     private Vector3 anchorPos; // avoids allocating memory to a new Vec3 every frame
     private float nextShoot;
     private Rigidbody2D rb;
+    private float health;
+
+    private int bonusProjectiles = 0;
+    private float bonusProjectilesEnd;
+    private float bonusDamage = 0;
+    private float bonusDamageEnd;
 
     public ShipControls Input { get; private set; }
 
     public float maxHealth = 5;
 
-    public float Health { get; protected set; }
+    public float Health { get { return health; }
+        protected set
+        {
+            health = Mathf.Clamp(value, 0f, maxHealth);
+        }
+    }
 
     public float player_score = 0;
+
+    public void PickupHealth(float amount)
+    {
+        Health = Health + amount;
+    }
+
+    public void PickupBonusProjectiles(int amount, float time)
+    {
+        if (bonusProjectilesEnd > Time.time)
+        {
+            bonusProjectilesEnd += time;
+            bonusProjectiles += amount;
+        }
+        else
+        {
+            bonusProjectilesEnd = Time.time + time;
+            bonusProjectiles = amount;
+        }
+    }
+
+    public void PickupBonusDamage(float amount, float time)
+    {
+        if (bonusDamageEnd > Time.time)
+        {
+            bonusDamageEnd += time;
+            bonusDamage += amount;
+        }
+        else
+        {
+            bonusDamageEnd = Time.time + time;
+            bonusDamage = amount;
+        }
+    }
 
     public virtual void TakeDamage(float amount, GameObject source)
     {
@@ -68,8 +112,19 @@ public class ShipController : MonoBehaviour, IDamageable, ICollectable
         
         if (input.ShootBullet.WasPressedThisFrame() && Time.time >= nextShoot)
         {
-            var bullet = Instantiate(bulletPrefab);
-            bullet.transform.position = transform.position + (Vector3.right * 1.3f);
+            int numBullets = bonusProjectilesEnd >= Time.time ? bonusProjectiles + 1 : 1;
+            float bulletDamage = bonusDamageEnd >= Time.time ? bonusDamage + 1 : 1;
+
+            for (int i = 1; numBullets >= i; i++)
+            {
+                var bullet = Instantiate(bulletPrefab);
+                bullet.transform.position = transform.position + (Vector3.right * 1.3f) + (Vector3.up * -.25f * (numBullets - 1)) + (Vector3.up * .5f * (i-1));
+
+                bullet.GetComponent<Bullet>().damage = bulletDamage;
+            }
+
+            //var bullet = Instantiate(bulletPrefab);
+            //bullet.transform.position = transform.position + (Vector3.right * 1.3f);
 
             nextShoot = Time.time + shootDelay;
         }
