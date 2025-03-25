@@ -30,6 +30,11 @@ public class StageManager : MonoBehaviour
         StartStage(0);
     }
 
+    public void Restart()
+    {
+        StartStage(0);
+    }
+
     // Update is called once per frame
     void Update()
     {

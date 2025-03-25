@@ -59,7 +59,7 @@ public class Game : MonoBehaviour
         // run the player start function again
         Input.Enable();
         HUD.SetActive(true);
-        playerPrefab.GetComponent<ShipController>().restartGame();
+        playerPrefab.GetComponentInChildren<ShipController>().restartGame();
 
 
     }

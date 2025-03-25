@@ -29,4 +29,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   stageLength: 60
   stageSpawnTimeMod: 1
-  stageColor: {r: 0.1957992, g: 0.22409531, b: 0.41509432, a: 1}
+  stageColor: {r: 0.25872195, g: 0.29359868, b: 0.5377358, a: 1}
