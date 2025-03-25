@@ -16,6 +16,7 @@ public class Game : MonoBehaviour
         Instance = this;
 
         Input = new ShipControls();
+        TestStart();
 
     }
 
@@ -32,5 +33,11 @@ public class Game : MonoBehaviour
 
         scrollSpeed = 10;
 
+    }
+
+    public void TestStart()
+    {
+        Input.Enable();
+        scrollSpeed = 10;
     }
 }

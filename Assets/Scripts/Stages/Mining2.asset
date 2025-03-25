@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1da0b3a215618444badcd08d8b8c75bf, type: 3}
-  m_Name: Mining
+  m_Name: Mining2
   m_EditorClassIdentifier: 
   spawns:
-  - {fileID: 11400000, guid: 11847a2c9026c7a4ab156681e37bf20b, type: 2}
   - {fileID: 11400000, guid: ee545ece3a9c45b4aab3253cce37d40f, type: 2}
   - {fileID: 11400000, guid: c4f0b50bc4d922244b4f570b2a3f0d63, type: 2}
-  - {fileID: 11400000, guid: ab7d24c9c8443244cb99b9b53f271009, type: 2}
   entityAmountCurve:
     serializedVersion: 2
     m_Curve: []
@@ -24,4 +22,4 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   stageLength: 60
-  stageColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+  stageColor: {r: 0.1957992, g: 0.22409531, b: 0.41509432, a: 1}
